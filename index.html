@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>فوفينام سوق أهراس</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+
+ margin:0;font-family:Arial,sans-serif;
+
+ background:#f4f6fa;color:#17243a;
+
+}
+
+header{
+
+ background:#092b55;color:white;
+
+ text-align:center;padding:35px 15px;
+
+}
+
+header h1{font-size:30px}
+
+nav{
+
+ background:#123e70;padding:15px;
+
+ text-align:center;position:sticky;top:0;
+
+}
+
+nav a{color:white;text-decoration:none;margin:10px}
+
+.hero{
+
+ text-align:center;padding:65px 20px;
+
+ background:linear-gradient(135deg,#092b55,#1768a5);
+
+ color:white;
+
+}
+
+.hero h2{font-size:30px}
+
+.btn{
+
+ display:inline-block;background:#e7bd32;
+
+ color:#102747;padding:13px 25px;
+
+ border-radius:8px;text-decoration:none;
+
+ font-weight:bold;margin-top:15px;
+
+}
+
+section{padding:35px 18px;text-align:center}
+
+h2{color:#103e70}
+
+.cards{
+
+ display:flex;flex-wrap:wrap;
+
+ justify-content:center;gap:18px;
+
+}
+
+.card{
+
+ background:white;padding:22px;
+
+ border-radius:12px;width:270px;
+
+ box-shadow:0 3px 12px #0001;
+
+}
+
+.card img{
+
+ width:100%;height:170px;
+
+ object-fit:cover;border-radius:8px;
+
+}
+
+form{
+
+ max-width:500px;margin:auto;
+
+ background:white;padding:25px;
+
+ border-radius:12px;
+
+}
+
+input,select{
+
+ width:100%;padding:13px;
+
+ margin:9px 0;border:1px solid #ccc;
+
+ border-radius:7px;font-size:16px;
+
+}
+
+button{
+
+ background:#103e70;color:white;
+
+ border:0;padding:14px;width:100%;
+
+ border-radius:8px;font-size:17px;
+
+ cursor:pointer;
+
+}
+
+footer{
+
+ background:#092b55;color:white;
+
+ text-align:center;padding:25px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>فوفينام فيات فوداو</h1>
+
+<p>فرع نادي شباب أمل سوق أهراس</p>
+
+</header>
+
+<nav>
+
+<a href="#home">الرئيسية</a>
+
+<a href="#about">عن الفرع</a>
+
+<a href="#trainers">المدربون</a>
+
+<a href="#register">التسجيل</a>
+
+</nav>
+
+<div class="hero" id="home">
+
+<h2>مرحباً بكم في عالم الفوفينام</h2>
+
+<p>القوة، الانضباط، الاحترام والروح الرياضية</p>
+
+<a class="btn" href="#register">سجل الآن</a>
+
+</div>
+
+<section id="about">
+
+<h2>من نحن؟</h2>
+
+<p>
+
+فرع فوفينام فيات فوداو بسوق أهراس،
+
+نعمل على نشر وتطوير هذا الفن القتالي،
+
+وتكوين جيل يتمتع بالقوة البدنية والانضباط والأخلاق.
+
+</p>
+
+</section>
+
+<section id="trainers">
+
+<h2>طاقم المدربين</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://placehold.co/400x300?text=Trainer" alt="المدرب">
+
+<h3>اسم المدرب الأول</h3>
+
+<p>الصفة: مدرب</p>
+
+<p>الرتبة: تضاف هنا</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://placehold.co/400x300?text=Trainer" alt="المدرب">
+
+<h3>اسم المدرب الثاني</h3>
+
+<p>الصفة: مساعد مدرب</p>
+
+<p>الرتبة: تضاف هنا</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="register">
+
+<h2>التسجيل في الفرع</h2>
+
+<p>املأ المعلومات التالية للتسجيل الأولي</p>
+
+<form id="registration">
+
+<input id="name" placeholder="الاسم واللقب" required>
+
+<input id="birth" type="date" required>
+
+<select id="gender" required>
+
+<option value="">الجنس</option>
+
+<option>ذكر</option>
+
+<option>أنثى</option>
+
+</select>
+
+<input id="phone" type="tel" placeholder="رقم الهاتف" required>
+
+<select id="level">
+
+<option>مبتدئ</option>
+
+<option>لدي خبرة سابقة</option>
+
+</select>
+
+<button type="submit">إرسال طلب التسجيل</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>فوفينام فيات فوداو - سوق أهراس</p>
+
+<p>جميع الحقوق محفوظة</p>
+
+</footer>
+
+<script>
+
+document.getElementById("registration")
+
+.addEventListener("submit",function(e){
+
+ e.preventDefault();
+
+ const message =
+
+ "طلب تسجيل جديد في فوفينام سوق أهراس\n"+
+
+ "الاسم: "+document.getElementById("name").value+"\n"+
+
+ "تاريخ الميلاد: "+document.getElementById("birth").value+"\n"+
+
+ "الجنس: "+document.getElementById("gender").value+"\n"+
+
+ "الهاتف: "+document.getElementById("phone").value+"\n"+
+
+ "المستوى: "+document.getElementById("level").value;
+
+ // استبدل الرقم برقم واتساب المسؤول
+
+ const clubNumber="213XXXXXXXXX";
+
+ window.open(
+
+ "https://wa.me/"+clubNumber+"?text="+
+
+ encodeURIComponent(message),"_blank"
+
+ );
+
+});
+
+</script>
+
+</body>
+
+</html>
